@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "manage contacts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Brovko",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.5",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "log4js": "^1.1.1",
+    "mongodb": "^2.2.24",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta11"
+  }
+}
