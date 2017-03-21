@@ -2,6 +2,9 @@ doctype
 html
   head
     title= "my title"
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="../styles/main.css" type="text/css")
   body
-    h1= "TEST"
-    p= msg
+    block header
+      include header
+    block content

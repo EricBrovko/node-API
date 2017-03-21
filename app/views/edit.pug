@@ -1,0 +1,15 @@
+extends index
+
+block content
+	.container
+		form.form(method="post", action="/update", name="editContact")
+			.form-group
+				label(for="name") Name:
+					input#name.form-control(type="text", name="name" value= contact.name)
+			.form-group
+				label(for="phone") Phone:
+					input#phone.form-control(type="text", name="phone" value= contact.phone)
+			.form-group
+				label(for="email") Email:
+					input#email.form-control(type="text", name="email" value= contact.email)
+			button.btn.btn-default(type="submit") Submit

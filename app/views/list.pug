@@ -1,0 +1,33 @@
+extends index
+
+block content
+  .container
+    h2 Contacts list
+    table.table.table-hover
+      thead
+        tr
+          th Name
+          th Phone
+          th Email
+          th Call amount
+          th Actions
+      tbody
+        each contact in contacts
+          tr
+            td= contact.name
+            td= contact.phone
+            td= contact.email
+            td= contact.callAmount
+            td
+              form.form.list-actions( method='post' action='/call' name='callUserForm' )
+                input.form-control( name='name' style='display: none' value= contact.name )
+                button.btn.btn-default.btn-xs(type='submit')
+                  span.glyphicon.glyphicon-phone(aria-hidden='true')
+              form.form.list-actions( method='post' action='/edit' name='editUserForm' )
+                input.form-control( name='name' style='display: none' value= contact.name )
+                button.btn.btn-default.btn-xs(type='submit')
+                  span.glyphicon.glyphicon-pencil(aria-hidden='true')
+              form.form.list-actions( method='post' action='/remove' name='removeUserForm')
+                input.form-control( name='name' style='display: none' value= contact.name )
+                button.btn.btn-danger.btn-xs(type='submit')
+                  span.glyphicon.glyphicon-remove(aria-hidden='true')
